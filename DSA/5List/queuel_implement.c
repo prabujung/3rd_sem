@@ -71,6 +71,9 @@ int main()
     display();
     dequeue();
     display();
-
+    enqueue(3);
+    display();
+    dequeue();
+    display();
     return 0;
 }
