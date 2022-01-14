@@ -28,7 +28,6 @@ struct node * createnode(int data)
 {
     struct node *newnode = (struct node*)malloc(sizeof(struct node));
     newnode->info = data;
-    newnode->next = head;
     return newnode;
 }
 
@@ -36,8 +35,12 @@ struct node * createnode(int data)
 void f_insert(int data)
 {
     struct node *newnode = createnode(data);
-    head = newnode;
+    struct node *temp = head;
+    while(temp->next != head)
+        temp = temp->next;
     newnode->next = head;
+    temp->next = newnode;
+    head = newnode;
 }
 
 //Insert a node to last position of the list
@@ -47,6 +50,7 @@ void e_insert(int data)
     if(head == NULL)
     {
         head = newnode;
+        newnode->next = head;
     }
     else
     {
@@ -56,6 +60,7 @@ void e_insert(int data)
             temp = temp->next;
         }
         temp->next = newnode;
+        newnode->next = head;
     }
 }
 
