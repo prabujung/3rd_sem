@@ -45,10 +45,8 @@ void e_insert(int data)
     struct node *newnode = getnode();
     if(head == NULL)
     {
-        newnode->info = data;
-        newnode->next = head;
-        newnode->prev = NULL;
-        head = newnode;
+        printf("the list is empty. %d is inserted at beginning of the list.",data);
+        f_insert(data);
     }
     else
     {
@@ -106,8 +104,8 @@ void e_delete()
     }
 
     printf("\n%d is deleted.",temp->next->info);
-    free(temp->next);
     temp->next = NULL;
+    free(temp->next);
 }
 
 //Delete a node from a specified position
