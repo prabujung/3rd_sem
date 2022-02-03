@@ -32,11 +32,10 @@ int isfull()
 void enQueue(int value)
 {
     if (isfull())
-        printf("\nQueue is Full!!");
+        printf("\nQueue is Full!!\n");
     else
     {
-        q.rear++;
-        q.items[q.rear] = value;
+        q.items[++q.rear] = value;
         printf("\nInserted -> %d", value);
     }
 }
@@ -44,7 +43,7 @@ void enQueue(int value)
 void deQueue()
 {
     if (isempty())
-        printf("\nQueue is Empty!!");
+        printf("\nQueue is Empty!!\n");
     else
     {
         printf("\nDeleted : %d", q.items[q.front]);
@@ -54,12 +53,12 @@ void deQueue()
 
 void display()
 {
-    if (q.rear == -1)
-        printf("\nQueue is Empty!!!");
+    if (isempty())
+        printf("\nQueue is Empty!!!\n");
     else
     {
         int i;
-        printf("\nQueue elements are:\n");
+        printf("\nQueue elements are: ");
         for (i = q.front; i <= q.rear; i++)
             printf("%d  ", q.items[i]);
     }
