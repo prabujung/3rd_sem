@@ -33,7 +33,6 @@ void push(struct stack *s, int x)
 	}
 	else
 	{
-		//s->top++;
 		s->info[++s->top] = x;
 		printf("\nInserted -> %d", x);
 	}
