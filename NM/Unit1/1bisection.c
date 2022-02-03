@@ -9,7 +9,7 @@ float f(float x)
 float bisection(float x1, float x2, float e)
 {
     float m;
-    
+    printf("\n%c  \t\t  %c\t\t   %c",'a','b','c');
     do
     {
         m=(x2+x1)/2;
