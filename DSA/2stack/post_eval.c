@@ -1,5 +1,5 @@
-#include<stdio.h>
-#include<ctype.h>
+#include <stdio.h>
+#include <ctype.h>
 
 int stack[20];
 int top = -1;
@@ -18,13 +18,13 @@ int main()
 {
     char exp[20];
     char *e;
-    int n1,n2,n3,num;
+    int n1, n2, n3, num;
     printf("Enter the expression :: ");
-    scanf("%s",exp);
+    scanf("%s", exp);
     e = exp;
-    while(*e != '\0')
+    while (*e != '\0')
     {
-        if(isdigit(*e))
+        if (isdigit(*e))
         {
             num = *e - 48; //48 is subtracterd because *e is character and contains ASCII key of number
             push(num);
@@ -33,33 +33,33 @@ int main()
         {
             n1 = pop();
             n2 = pop();
-            switch(*e)
+            switch (*e)
             {
-            case '+':
-            {
-                n3 = n1 + n2;
-                break;
-            }
-            case '-':
-            {
-                n3 = n2 - n1;
-                break;
-            }
-            case '*':
-            {
-                n3 = n1 * n2;
-                break;
-            }
-            case '/':
-            {
-                n3 = n2 / n1;
-                break;
-            }
+                case '+':
+                {
+                    n3 = n1 + n2;
+                    break;
+                }
+                case '-':
+                {
+                    n3 = n2 - n1;
+                    break;
+                }
+                case '*':
+                {
+                    n3 = n1 * n2;
+                    break;
+                }
+                case '/':
+                {
+                    n3 = n2 / n1;
+                    break;
+                }
             }
             push(n3);
         }
         e++;
     }
-    printf("\nThe result of expression %s  =  %d\n\n",exp,pop());
+    printf("\nThe result of expression %s  =  %d\n\n", exp, pop());
     return 0;
 }
