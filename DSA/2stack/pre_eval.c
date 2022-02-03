@@ -38,26 +38,26 @@ int main()
             n2 = pop();
             switch(*e)
             {
-            case '+':
-            {
-                n3 = n1 + n2;
-                break;
-            }
-            case '-':
-            {
-                n3 = n2 - n1;
-                break;
-            }
-            case '*':
-            {
-                n3 = n1 * n2;
-                break;
-            }
-            case '/':
-            {
-                n3 = n2 / n1;
-                break;
-            }
+                case '+':
+                {
+                    n3 = n1 + n2;
+                    break;
+                }
+                case '-':
+                {
+                    n3 = n2 - n1;
+                    break;
+                }
+                case '*':
+                {
+                    n3 = n1 * n2;
+                    break;
+                }
+                case '/':
+                {
+                    n3 = n2 / n1;
+                    break;
+                }
             }
             push(n3);
         }
