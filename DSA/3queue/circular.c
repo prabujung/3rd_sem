@@ -81,7 +81,6 @@ int main()
     enQueue(4);
     enQueue(5);
     enQueue(6);
-    printf("\n%d %d", q.front, q.rear);
     display();
 
     deQueue();
