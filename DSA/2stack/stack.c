@@ -33,13 +33,15 @@ void push(struct stack *s, int x)
 	}
 	else
 	{
-		s->top++;
-		s->info[s->top] = x;
+		//s->top++;
+		s->info[++s->top] = x;
+		printf("\nInserted -> %d", x);
 	}
 }
 
 void Display(struct stack *s)
 {
+	printf("\nThe stack elements are/is :: ");
 	for (int i = 0; i <= s->top ; i++)
 	{
 		printf("%d ", s->info[i]);
@@ -55,6 +57,7 @@ void pop(struct stack *s)
 	}
 	else
 	{
+		printf("\nDeleted -> %d", s->info[s->top]);
 		s->top--;
 	}
 }
