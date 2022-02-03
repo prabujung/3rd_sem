@@ -72,13 +72,10 @@ int main()
 	push(stack, 54);
 	push(stack, 56);
 	Display(stack);
-	printf("\n");
 	pop(stack);
 	Display(stack);
-	printf("\n");
 	pop(stack);
 	pop(stack);
 	Display(stack);
-	printf("\n");
 	return 0;
 }
