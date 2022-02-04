@@ -70,13 +70,14 @@ void n_insert(int data, int position)
         printf("the list is empty. %d is inserted at beginning of the list.",data);
         f_insert(data);
     }
-    
-    for(int i=1; i < position - 1 ; i++)
+    else
     {
-        temp = temp->next;
+        for(int i=1; i < position - 1 ; i++)
+            temp = temp->next;
+        newnode->next = temp->next;
+        temp->next = newnode;
     }
-    newnode->next = temp->next;
-    temp->next = newnode;
+    
 }
 
 //Delete a node from first position of the list
@@ -106,16 +107,14 @@ void e_delete()
 //Delete a node from a specified position
 void n_delete(int position)
 {
-    //struct node *p;
+   
     struct node *temp = head;
     for(int i=1; i < position - 1 ; i++)
     {
         temp = temp->next;
     }
     printf("\n%d is deleted.", temp->next->info);
-    //p = temp->next;
     temp->next = temp->next->next;
-    //free(p);
 }
 
 //Search a given data from the list
