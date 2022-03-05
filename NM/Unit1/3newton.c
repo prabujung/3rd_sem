@@ -20,7 +20,7 @@ void main()
 	 
 	
 	 printf("\nStep\t\tx0\t\tf(x0)\t\tx1\t\tf(x1)\n");
-	 while(fabs((x1-x0)/x0)>e)
+	 do
 	 {
 		  g0 = g(x0);
 		  f0 = f(x0);
@@ -42,7 +42,7 @@ void main()
 		  
 		  f1 = f(x1);
 		  
-	 };
+	 }while(fabs(f1)>=e);
 	
 	 printf("\nRoot is: %f", x1);
 	 
