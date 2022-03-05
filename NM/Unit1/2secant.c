@@ -13,7 +13,7 @@ int main()
     scanf("%f%f",&x1,&x2);
     printf("Enter tolorable error : ");
     scanf("%f", &e);
-    printf("c \t \t \t b \t \t \t c \t \t\t f(c)");
+    printf("a \t \t \t b \t \t \t c \t \t\t f(c)");
     while(fabsf((x2-x1)/x1) > e )
     {
         printf("\n%f \t \t%f \t \t",x1,x2);
